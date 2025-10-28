@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lily's Kicks</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" class="logo" style="width: 120px;">
+    <nav>
+      <span class="cart-icon" id="openCart">🛒 Cart <span class="cart-count" id="cartCount">0</span></span>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <div class="nav-links" id="navLinks">
+        <a href="#" class="active" data-target="home">🏠 Home</a>
+        <a href="#" data-target="shop">🛍️ Shop</a>
+        <a href="#" data-target="about">ℹ️ Make an enquiry</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero active">
+    <h2>Step Into Style With Lily's Kicks</h2>
+    <button onclick="switchSection('shop')">Shop Now</button>
+  </section>
+
+  <section id="shop" class="section">
+    <h2>Lilys' Kicks Collection</h2>
+    <div class="shop-nav">
+      <button class="active" data-gender="male">Male</button>
+      <button data-gender="female">Female</button>
+    </div>
+
+    <div id="male" class="gender-section">
+      <div class="search-filter">
+        <select id="maleFilter">
+          <option value="default">Sort by</option>
+          <option value="low">Lowest Price</option>
+          <option value="high">Highest Price</option>
+        </select>
+        <input type="text" id="maleSearch" placeholder="Search for shoes...">
+      </div>
+      <div class="products show" id="maleProducts"></div>
+    </div>
+
+    <div id="female" class="gender-section" style="display:none;">
+      <div class="search-filter">
+        <select id="femaleFilter">
+          <option value="default">Sort by</option>
+          <option value="low">Lowest Price</option>
+          <option value="high">Highest Price</option>
+        </select>
+        <input type="text" id="femaleSearch" placeholder="Search for shoes...">
+      </div>
+      <div class="products show" id="femaleProducts"></div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <h2>Have an enquiry?</h2>
+    <p>We’re redefining fashion footwear for everyone — bringing comfort, class, and confidence to every step you take. Our goal is to make premium shoes affordable and accessible for both men and women across the globe.</p>
+  </section>
+
+  <!-- Cart -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-box">
+      <h3>Your Cart</h3>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-total" id="cartTotal">Total: $0</div>
+      <div class="cart-actions">
+        <button class="close-btn" id="closeCart">Close</button>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item Popup -->
+  <div class="item-popup" id="itemPopup">
+    <img src="" alt="">
+    <h3></h3>
+    <p></p>
+    <span></span>
+    <div class="popup-buttons">
+      <button class="close-popup">Close</button>
+      <button class="add-popup">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">Successfully added to cart</div>
+
+  <!--<footer>
+    <p>© 2025 Lily's Kicks. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>-->
+
+  <script src="script.js"></script>
+</body>
+</html>
