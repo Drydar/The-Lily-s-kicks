@@ -26,12 +26,14 @@
   </section>
 
   <section id="shop" class="section">
-    <h2>Lilys' Kicks Collection</h2>
+    <h2>Lily's Kicks Collection</h2>
     <div class="shop-nav">
       <button class="active" data-gender="male">Male</button>
       <button data-gender="female">Female</button>
+      <button data-gender="bag">Bags</button>
     </div>
 
+    <!-- MALE SECTION -->
     <div id="male" class="gender-section">
       <div class="search-filter">
         <select id="maleFilter">
@@ -44,6 +46,7 @@
       <div class="products show" id="maleProducts"></div>
     </div>
 
+    <!-- FEMALE SECTION -->
     <div id="female" class="gender-section" style="display:none;">
       <div class="search-filter">
         <select id="femaleFilter">
@@ -54,6 +57,19 @@
         <input type="text" id="femaleSearch" placeholder="Search for shoes...">
       </div>
       <div class="products show" id="femaleProducts"></div>
+    </div>
+
+    <!-- BAG SECTION -->
+    <div id="bag" class="gender-section" style="display:none;">
+      <div class="search-filter">
+        <select id="bagFilter">
+          <option value="default">Sort by</option>
+          <option value="low">Lowest Price</option>
+          <option value="high">Highest Price</option>
+        </select>
+        <input type="text" id="bagSearch" placeholder="Search for bags...">
+      </div>
+      <div class="products show" id="bagProducts"></div>
     </div>
   </section>
 
@@ -67,7 +83,7 @@
     <div class="cart-box">
       <h3>Your Cart</h3>
       <div class="cart-items" id="cartItems"></div>
-      <div class="cart-total" id="cartTotal">Total: $0</div>
+      <div class="cart-total" id="cartTotal">Total: ₦0</div>
       <div class="cart-actions">
         <button class="close-btn" id="closeCart">Close</button>
         <button class="checkout-btn">Checkout</button>
@@ -89,10 +105,6 @@
 
   <!-- Toast -->
   <div class="toast" id="toast">Successfully added to cart</div>
-
-  <!--<footer>
-    <p>© 2025 Lily's Kicks. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
-  </footer>-->
 
   <script src="script.js"></script>
 </body>
