@@ -97,7 +97,7 @@ function updateCartUI() {
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <span class="item-price">$${item.price * (item.qty || 1)}</span>
+      <span class="item-price">₦${item.price * (item.qty || 1)}</span>
       <button class="remove-btn">Remove</button>
     `;
 
@@ -106,7 +106,7 @@ function updateCartUI() {
 
     qtyInput.addEventListener('change', () => {
       item.qty = parseInt(qtyInput.value) || 1;
-      priceEl.textContent = `$${item.price * item.qty}`;
+      priceEl.textContent = `₦${item.price * item.qty}`;
       updateTotal();
     });
 
@@ -121,28 +121,28 @@ function updateCartUI() {
   });
 
   cartCountEl.textContent = cart.length;
-  cartTotalEl.textContent = `Total: $${total}`;
+  cartTotalEl.textContent = `Total: ₦${total}`;
 }
 
 function updateTotal() {
   let total = 0;
   cart.forEach(item => total += item.price * (item.qty || 1));
-  cartTotalEl.textContent = `Total: $${total}`;
+  cartTotalEl.textContent = `Total: ₦${total}`;
 }
 
 // === SHOP ITEMS ===
 maleList = [
-  { name: 'Classic Sneakers', price: 45, img: 'm_shoe1.jpg', desc: 'Stylish and durable sneakers.' },
-  { name: 'Formal Leather Shoes', price: 70, img: 'm_shoe2.jpg', desc: 'Perfect for office or formal events.' },
-  { name: 'Running Trainers', price: 55, img: 'm_shoe3.jpg', desc: 'Comfortable and lightweight trainers.' },
-  { name: 'Casual Loafers', price: 60, img: 'm_shoe4.jpg', desc: 'Casual yet classy for outings.' }
+  { name: 'Classic Sneakers', price: 40000, img: 'm_shoe1.jpg', desc: 'Stylish and durable sneakers.' },
+  { name: 'Formal Leather Shoes', price: 15000, img: 'm_shoe2.jpg', desc: 'Perfect for office or formal events.' },
+  { name: 'Running Trainers', price: 25000, img: 'm_shoe3.jpg', desc: 'Comfortable and lightweight trainers.' },
+  { name: 'Casual Loafers', price: 60000, img: 'm_shoe4.jpg', desc: 'Casual yet classy for outings.' }
 ];
 
 femaleList = [
-  { name: 'Elegant Heels', price: 65, img: 'f_shoe4.jpg', desc: 'Elegant and stylish heels for ladies.' },
-  { name: 'Casual Flats', price: 40, img: 'f_shoe3.jpg', desc: 'Perfect for comfort and casual wear.' },
-  { name: 'Sport Sneakers', price: 50, img: 'f_shoe2.jpg', desc: 'Lightweight and sporty.' },
-  { name: 'Ankle Boots', price: 80, img: 'f_shoe1.jpg', desc: 'Durable boots for all occasions.' }
+  { name: 'Elegant Heels', price: 65000, img: 'f_shoe4.jpg', desc: 'Elegant and stylish heels for ladies.' },
+  { name: 'Casual Flats', price: 20000, img: 'f_shoe3.jpg', desc: 'Perfect for comfort and casual wear.' },
+  { name: 'Sport Sneakers', price: 50000, img: 'f_shoe2.jpg', desc: 'Lightweight and sporty.' },
+  { name: 'Ankle Boots', price: 80000, img: 'f_shoe1.jpg', desc: 'Durable boots for all occasions.' }
 ];
 
 // === CREATE PRODUCT CARDS ===
@@ -154,7 +154,7 @@ function createProductCard(item) {
     <div class="product-content">
       <h3>${item.name}</h3>
       <p>${item.desc}</p>
-      <span>$${item.price}</span>
+      <span>₦${item.price}</span>
       <div class="btn-row">
         <button class="view-btn">View</button>
         <button class="add-btn">Add to Cart</button>
@@ -184,7 +184,7 @@ function createProductCard(item) {
     popupImg.src = item.img;
     popupName.textContent = item.name;
     popupDesc.textContent = item.desc;
-    popupPrice.textContent = `$${item.price}`;
+    popupPrice.textContent = `₦${item.price}`;
     itemPopup.classList.add('show');
   });
 
