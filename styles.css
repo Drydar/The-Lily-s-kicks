@@ -2,7 +2,9 @@
 @font-face {
   font-family: "Poppins";
   src: url(Poppins-Regular.ttf);
-}* {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins';}
+}
+
+*{margin:0; padding:0; box-sizing:border-box; font-family:'Poppins';}
 body {background:linear-gradient(130deg, purple, #fafafa, white, purple); color:#333; transition:backdrop-filter .3s ease; position: relative;}
 body.blur {backdrop-filter:blur(5px);}
 
@@ -18,19 +20,19 @@ nav {display:flex; align-items:center; gap:20px;}
 .nav-links a {
   color:white; text-decoration:none; font-weight:500;
   display:flex; align-items:center; gap:5px;
-  transition:color .3s, border-bottom .3s;
+  transition:color .3s, border-bottom .3s; margin: 3px;
   padding:6px 12px; border-radius:5px; font-size:.95rem;
 }
-.nav-links a:hover {color:#ff7b00; background:rgba(255,123,0,0.1);}
-.nav-links a.active {color:#ff7b00; border-bottom:2px solid #ff7b00;}
+.nav-links a:hover {color:#ff7b00;}
+.nav-links a.active {color:#ff7b00;}
 .hamburger {display:none; flex-direction:column; gap:5px; cursor:pointer;}
 .hamburger span {width:25px; height:3px; background:white; border-radius:2px; transition:all .3s ease;}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .hamburger.active span:nth-child(2){opacity:0;}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
 .cart-icon {
-  background:#ff7b00; color:#fff; padding:8px 14px; border-radius:20px;
-  cursor:pointer; font-size:.9rem; position:relative; z-index:1100;
+  background: whitesmoke; color:orange; padding:8px 14px; border-radius:20px;
+  cursor:pointer; font-size:.9rem; font-weight: 600; position:relative; z-index:1100;
 }
 .cart-count {
   position:absolute; top:-8px; right:-8px;
@@ -53,7 +55,7 @@ nav {display:flex; align-items:center; gap:20px;}
 
 .hero{
   height:100vh; width:100%;
-  background:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80')center/cover no-repeat;
+  background:url('home.jpg')center/cover no-repeat;
   display:none; align-items:center; justify-content:center; flex-direction:column;
   text-align:center; color:white; position:relative; padding:0 20px; transition:opacity .6s ease;
 }
